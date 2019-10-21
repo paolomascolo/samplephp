@@ -1,57 +1,61 @@
-*{
-    text-align: center;
+* {
+  text-align: center;
 }
 
 
 /*Tables*/
 table {
-	border-collapse: collapse;
-	width: 100%;
-	float: left;
-	border-radius: 4px;
-	-moz-border-radius: 4px;
+  border-collapse: collapse;
+  width: 100%;
+  float: left;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
 }
 
-th, td {
-	text-align: center;
-	padding: 2px;
+th,
+td {
+  text-align: center;
+  padding: 2px;
 }
 
-td{
-    font-size: 16px;
+td {
+  font-size: 16px;
 }
 
 
 tr:nth-child(even) {
-	background-color: #ffdb99;
+  background-color: yellow;
 }
 
 th {
-	background-color: darkorange;
-	color: #ffffff;
+  background-color: green;
+  color: green;
 }
 
 a:hover {
-	color: #999999;
+  color: green;
 }
 
-input, select{
-    background-color: inherit;
-    font-size: inherit;
+input,
+select {
+  background-color: inherit;
+  font-size: inherit;
 }
 
 button {
-width: 120px;
+  width: 120px;
 }
 
-input:hover,  input:active, input:focus{
-    border: 2px solid crimson;
+input:hover,
+input:active,
+input:focus {
+  border: 2px solid greenyellow;
 }
 
-button:hover{
-    background-color: crimson;
+button:hover {
+  background-color: greenyellow;
 }
 
-i{
-	margin-right: 10px;
+i {
+  margin-right: 10px;
 }
