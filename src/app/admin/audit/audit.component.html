@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-12">
+      <table>
+        <tr>
+          <th>
+            Status
+          </th>
+          <th>
+            User
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <!-- con il binding bidirezionale [(ngModel)] mentre scriviamo nell'input
+            viene modificato l'attributo di dto in tempo reale-->
+            <input placeholder="Status" [(ngModel)]="audittoinsert.status">
+          </td>
+          <td>
+            <!-- con il binding bidirezionale [(ngModel)] mentre scriviamo nell'input
+            viene modificato l'attributo di dto in tempo reale-->
+            <input placeholder="Username" [(ngModel)]="audittoinsert.user.id">
+          </td>
+         
+          <td>
+            <button (click)="insert(audittoinsert)"><i class="fas fa-plus"></i>Insert</button>
+          </td>
+          <td>
+            <button (click)="clear()"><i class="fas fa-times"></i>Clear</button>
+          </td>
+        </tr>
+        <tr *ngFor="let audit of audit">
+          <td>
+            <input [(ngModel)]="audit.status">
+          </td>
+          <td>
+            <input [(ngModel)]="audit.user.id">
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+ 
+</div>

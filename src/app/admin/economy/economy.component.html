@@ -1,0 +1,114 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-12">
+      <table>
+        <tr>
+          <th>
+            Price
+          </th>
+          <th>
+            Iva
+          </th>
+          <th>
+            Account
+          </th>
+          <th>
+              Total
+            </th>
+          <th>
+            No Iva
+          </th>
+          <th>
+            Service
+          </th>
+          <th>
+            Company
+          </th>
+          <th>
+            Edit
+          </th>
+          <th>
+            Delete
+          </th>
+          
+        </tr>
+        <tr>
+          <td>
+            <!-- con il binding bidirezionale [(ngModel)] mentre scriviamo nell'input
+            viene modificato l'attributo di dto in tempo reale-->
+            <input placeholder="Price" [(ngModel)]="economytoinsert.price">
+          </td>
+          <td>
+            <input placeholder="Iva" [(ngModel)]="economytoinsert.iva">
+          </td>
+          <td>
+            <input placeholder="Account" [(ngModel)]="economytoinsert.account">
+          </td>
+          <td>
+              <input placeholder="Total" [(ngModel)]="economytoinsert.total">
+            </td>
+          <td>
+            <input placeholder="No Iva" [(ngModel)]="economytoinsert.notIva">
+          </td>
+          <td>
+            <select placeholder="Service" [(ngModel)]="economytoinsert.servizi">
+              <option [(ngValue)] = "servizi" *ngFor = "let servizi of servizi">{{servizi.name}}
+                
+              </option>
+              </select>
+          </td>
+
+          <td>
+              <select placeholder="Company" [(ngModel)]="economytoinsert.idc">
+                <option [(ngValue)] = "idc" *ngFor = "let idc of company">{{idc.name}}
+                  
+                </option>
+                </select>
+            </td>
+
+          <td>
+            <button (click)="insert(economytoinsert)"><i class="fas fa-plus"></i>Insert</button>
+          </td>
+          <td>
+            <button (click)="clear()"><i class="fas fa-times"></i>Clear</button>
+          </td>
+        </tr>
+        <tr *ngFor="let economy of economy">
+          <td>
+            <input [(ngModel)]="economy.price">
+          </td>
+          <td>
+            <input [(ngModel)]="economy.iva">
+          </td>
+          <td>
+            <input [(ngModel)]="economy.account">
+          </td>
+          <td>
+              <input [(ngModel)]="economy.total">
+            </td>
+          <td>
+            <input [(ngModel)]="economy.notIva">
+          </td>
+          <td>
+            <input type="text" readonly="readonly"  [ngModel]="economy.servizi.name">
+              
+          </td>
+
+          <td>
+              <input type="text" readonly="readonly" [(ngModel)]="economy.idc.name">
+                
+            </td>
+
+          <td>
+            <button (click)=update(economy)><i class="fas fa-edit"></i>Edit</button>
+          </td>
+          <td>
+            <button (click)="delete(economy)"><i class="fas fa-trash"></i>Delete</button>
+          </td>
+         
+        </tr>
+      </table>
+    </div>
+  </div>
+ 
+</div>

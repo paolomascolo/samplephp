@@ -1,12 +1,13 @@
 #header {
-  background-color: green;
+  background-color: chocolate;
 
-  height: 8vh;
+  height: 10vh;
 }
 
 .searchContainer {
+
   margin-top: 10px;
-  display: inline-block;
+  display: hidden;
   width: 100%;
   height: auto;
   padding: auto;
@@ -18,12 +19,14 @@
 }
 
 .searchIcon {
+  display: hidden;
   padding: 0.5rem;
   z-index: 2;
   background-color: white;
 }
 
 .searchBox {
+  display: hidden;
   border: 0;
   padding: 0.5rem;
   background-color: white;
@@ -31,6 +34,7 @@
 }
 
 .searchButton {
+  display: hidden;
   height: 70%;
   margin-top: 7px;
   background: white;
@@ -52,4 +56,14 @@ p {
 
 i:hover {
   background-color: greenyellow;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+  margin-left: 440px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 29px;
 }

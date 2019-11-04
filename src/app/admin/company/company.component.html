@@ -1,0 +1,158 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-12">
+      <table>
+        <tr>
+          <th>
+            Name
+          </th>
+          <th>
+            SSN
+          </th>
+          <th>
+            P.I
+          </th>
+          <th>
+            Country
+          </th>
+          <th>
+            Address
+          </th>
+          <th>
+            Phone
+          </th>
+          <th>
+            Mobile
+          </th>
+          <th>
+            Fax
+          </th>
+          <th>
+            Legal Form
+          </th>
+          <th>
+            Mail
+          </th>
+          <th>
+            Pec
+          </th>
+          <th>
+            Members
+          </th>
+          <th>
+            Service
+          </th>
+          <th>
+            Edit
+          </th>
+          <th>
+            Delete
+          </th>
+          
+        </tr>
+        <tr>
+          <td>
+            <!-- con il binding bidirezionale [(ngModel)] mentre scriviamo nell'input
+            viene modificato l'attributo di dto in tempo reale-->
+            <input placeholder="Name" [(ngModel)]="companytoinsert.name">
+          </td>
+          <td>
+            <input placeholder="SSN" [(ngModel)]="companytoinsert.ssn">
+          </td>
+          <td>
+            <input placeholder="P.I" [(ngModel)]="companytoinsert.pi">
+          </td>
+          <td>
+            <input placeholder="Country" [(ngModel)]="companytoinsert.country">
+          </td>
+          <td>
+            <input placeholder="Address" [(ngModel)]="companytoinsert.address">
+          </td>
+          <td>
+            <input placeholder="Phone" [(ngModel)]="companytoinsert.phone">
+          </td>
+          <td>
+            <input placeholder="Mobile" [(ngModel)]="companytoinsert.mobile">
+          </td>
+          <td>
+            <input placeholder="Fax" [(ngModel)]="companytoinsert.fax">
+          </td>
+          <td>
+            <input placeholder="Legal Form" [(ngModel)]="companytoinsert.legalform">
+          </td>
+          <td>
+            <input placeholder="Mail" [(ngModel)]="companytoinsert.mail">
+          </td>
+          <td>
+            <input placeholder="Pec" [(ngModel)]="companytoinsert.pec">
+          </td>
+          <td>
+            <input placeholder="Members" [(ngModel)]="companytoinsert.members">
+          </td>
+          
+          <td>
+              <select placeholder="Service Type" [(ngModel)]="companytoinsert.comp">
+                <option value="SEKOMA">Sekoma</option>
+                <option value="CONFAGRICOLTURA">Confagricoltura</option>
+              </select>
+            </td>
+          <td>
+            <button (click)="insert(companytoinsert)"><i class="fas fa-plus"></i>Insert</button>
+          </td>
+          <td>
+            <button (click)="clear()"><i class="fas fa-times"></i>Clear</button>
+          </td>
+        </tr>
+        <tr *ngFor="let company of company">
+          <td>
+            <input [(ngModel)]="company.name">
+          </td>
+          <td>
+            <input [(ngModel)]="company.ssn">
+          </td>
+          <td>
+            <input [(ngModel)]="company.pi">
+          </td>
+          <td>
+            <input [(ngModel)]="company.country">
+          </td>
+          <td>
+            <input [(ngModel)]="company.address">
+          </td>
+          <td>
+            <input [(ngModel)]="company.phone">
+          </td>
+          <td>
+            <input [(ngModel)]="company.mobile">
+          </td>
+          <td>
+            <input [(ngModel)]="company.fax">
+          </td>
+          <td>
+            <input [(ngModel)]="company.legalform">
+          </td>
+          <td>
+            <input [(ngModel)]="company.mail">
+          </td>
+          <td>
+            <input [(ngModel)]="company.pec">
+          </td>
+          <td>
+            <input [(ngModel)]="company.members">
+          </td>
+          <td>
+              <input readonly="readonly" [(ngModel)]="company.comp">
+            </td>
+          <td>
+            <button (click)=update(company)><i class="fas fa-edit"></i>Edit</button>
+          </td>
+          <td>
+            <button (click)="delete(company)"><i class="fas fa-trash"></i>Delete</button>
+          </td>
+         
+        </tr>
+      </table>
+    </div>
+  </div>
+ 
+</div>

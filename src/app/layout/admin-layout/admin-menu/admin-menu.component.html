@@ -9,19 +9,14 @@ custom e sono definite nel CSS-->
         </a>
     </button>
     <!-- quando si clicca sul bottone la variabile "isAccountCollapsed" cambia valore booleano-->
-    <button class="menubtn" (click)="accountcollapse()">
-        <i class="fas fa-user"></i> Account
+    <button class="menubtn" (click)="auditcollapse()">
+        <i class="fas fa-user"></i> Audit Trail
     </button>
     <!-- La direttiva *ngIf mostra il contenuto del div solo se "isAccountCollapsed" è true -->
-    <div *ngIf="isAccountCollapsed">
+    <div *ngIf="isAuditCollapsed">
         <button class="collapsebtn">
-            <a [routerLink]="['/admin-dashboard/work-in-progress']">
-                <i class="fas fa-user-edit"></i> Edit Profile
-            </a>
-        </button>
-        <button class="collapsebtn">
-            <a [routerLink]="['/admin-dashboard/work-in-progress']">
-                <i class="fas fa-file-alt"></i>General Info
+            <a [routerLink]="['/admin-dashboard/audit']">
+                <i class="fas fa-user-edit"></i> Log
             </a>
         </button>
     </div>
@@ -35,6 +30,44 @@ custom e sono definite nel CSS-->
             </a>
         </button>
     </div>
+
+    <button class="menubtn" (click)="servizicollapse()">
+        <i class="fas fa-users"></i>Servizi
+    </button>
+    <div *ngIf="isServiziCollapsed">
+        <button class="collapsebtn">
+            <a [routerLink]="['/admin-dashboard/servizi']">
+                <i class="fas fa-edit"></i> Manage Servizi
+            </a>
+        </button>
+    </div>
+
+    <button class="menubtn" (click)="economycollapse()">
+        <i class="fas fa-users"></i>Economy
+    </button>
+    <div *ngIf="isEconomyCollapsed">
+        <button class="collapsebtn">
+            <a [routerLink]="['/admin-dashboard/economy']">
+                <i class="fas fa-edit"></i> Manage Economy
+            </a>
+        </button>
+
+    </div>
+
+
+    <button class="menubtn" (click)="companycollapse()">
+        <i class="fas fa-users"></i>Company
+    </button>
+    <div *ngIf="isCompanyCollapsed">
+        <button class="collapsebtn">
+            <a [routerLink]="['/admin-dashboard/company']">
+                <i class="fas fa-edit"></i> Manage Company
+            </a>
+        </button>
+
+    </div>
+
+
     <button class="menubtn" (click)="logout()">
         <i class="fas fa-sign-out-alt"></i>Logout
     </button>

@@ -1,0 +1,79 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-12">
+      <table>
+        <tr>
+          <th>
+            Name
+          </th>
+          <th>
+            Year
+          </th>
+          <th>
+            Price
+          </th>
+          <th>
+            Service Type
+          </th>
+          <th>
+            Edit
+          </th>
+          <th>
+            Delete
+          </th>
+          
+        </tr>
+        <tr>
+          <td>
+            <!-- con il binding bidirezionale [(ngModel)] mentre scriviamo nell'input
+            viene modificato l'attributo di dto in tempo reale-->
+            <input placeholder="Name" [(ngModel)]="servizitoinsert.name">
+          </td>
+          <td>
+            <input placeholder="Year" [(ngModel)]="servizitoinsert.year">
+          </td>
+          <td>
+            <input placeholder="Price" [(ngModel)]="servizitoinsert.price">
+          </td>
+          <td>
+            <select placeholder="Service Type" [(ngModel)]="servizitoinsert.servicetype">
+              <option value="SEKOMA">Sekoma</option>
+              <option value="CONFAGRICOLTURA">Confagricoltura</option>
+            </select>
+          </td>
+          <td>
+            <button (click)="insert(servizitoinsert)"><i class="fas fa-plus"></i>Insert</button>
+          </td>
+          <td>
+            <button (click)="clear()"><i class="fas fa-times"></i>Clear</button>
+          </td>
+        </tr>
+        <tr *ngFor="let servizi of servizi">
+          <td>
+            <input [(ngModel)]="servizi.name">
+          </td>
+          <td>
+            <input [(ngModel)]="servizi.year">
+          </td>
+          <td>
+            <input [(ngModel)]="servizi.price">
+          </td>
+          <td>
+            <select [(ngModel)]="servizi.servicetype">
+              <option [selected]="servizi.servicetype===SEKOMA" value="SEKOMA">Sekoma</option>
+              <option [selected]="servizi.servicetype===CONFAGRICOLTURA" value="CONFAGRICOLTURA">Confagricoltura</option>
+            </select>
+          </td>
+          <td>
+            <button (click)=update(servizi)><i class="fas fa-edit"></i>Edit</button>
+          </td>
+          <td>
+            <button (click)="delete(servizi)"><i class="fas fa-trash"></i>Delete</button>
+          </td>
+         
+        </tr>
+      </table>
+    </div>
+  </div>
+ 
+</div>

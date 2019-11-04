@@ -34,8 +34,8 @@ export abstract class AbstractCrudComponent<DTO>{
     this.service.insert(dto).subscribe(() => this.getAll());
   }
 
-  select(dto: DTO) {
-    this.selected = dto;
+  select(id: number) {
+    this.selected = this.dto;
   }
 
 }
