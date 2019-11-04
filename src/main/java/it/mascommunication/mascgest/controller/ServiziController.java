@@ -22,5 +22,7 @@ public class ServiziController extends AbstractController<ServiziDTO>{
 	public Iterable<ServiziDTO> list (){
 		return servizi.getAll();
 	}
+	
+	
 
 }

@@ -17,8 +17,8 @@ public class CompanyService extends AbstractService<Company,CompanyDTO> {
 	@Autowired
 	CompanyConverter conver;
 	
-	public CompanyDTO findById(long id) {
-		return converter.toDTO(((CompanyRepository)repository).findById(id));
+	public CompanyDTO findByIdc(long id) {
+	return converter.toDTO(((CompanyRepository)repository).findByIdc(id));
 		
 	}
 	public Iterable<CompanyDTO> getTutto(){

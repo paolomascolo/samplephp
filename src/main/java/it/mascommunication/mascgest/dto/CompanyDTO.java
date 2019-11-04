@@ -3,24 +3,20 @@ package it.mascommunication.mascgest.dto;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
-import it.mascommunication.mascgest.model.Servizi.Servicetype;
+import it.mascommunication.mascgest.model.Company.Companytype;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@JsonIdentityInfo(generator=ObjectIdGenerators.PropertyGenerator.class, property ="id")
+@JsonIdentityInfo(scope = CompanyDTO.class, generator = ObjectIdGenerators.PropertyGenerator.class, property = "idc")
 
 public class CompanyDTO {
-	public enum Servicetype {
-		SEKOMA,
-		CONFAGRICOLUTA
-	}
-	private long id;
-
-	private String type;
+	
+	private Long idc;
+	
+	private String name;
 
 	private String ssn;
 
@@ -43,5 +39,11 @@ public class CompanyDTO {
 	private String pec;
 
 	private String members;
+	
+	private Companytype comp;
 
-}
+		// TODO Auto-generated method stub
+		
+	}
+
+

@@ -4,7 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,16 +15,16 @@ import lombok.NoArgsConstructor;
 
 public class Company {
 
-	public enum Servicetype {
+	public enum Companytype {
 		SEKOMA,
-		CONFAGRICOLUTA
+		CONFAGRICOLTURA
 	}
 	
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
-private long id;
+private Long idc;
 
-private String type;
+private String name;
 
 private String ssn;
 
@@ -49,5 +48,8 @@ private String pec;
 
 private String members;
 
+private Companytype comp;
+
 
 }
+

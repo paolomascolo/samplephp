@@ -11,5 +11,5 @@ import it.mascommunication.mascgest.model.Company;
 @Transactional
 public interface CompanyRepository extends CrudRepository<Company,Long> {
 
-	Company findById(long id);
+	Company findByIdc(long id);
 }
