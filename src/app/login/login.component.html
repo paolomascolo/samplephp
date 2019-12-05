@@ -2,25 +2,94 @@
   "container", poi le row e infine le col (in tutto devono essere ESATTAMENTE 12 colonne per 
   ogni riga) -->
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-md-7">
+  
+    <div class="col-md-3">
       <img src="../../assets/logoc.png" alt="logo">
     </div>
-    <div class="col-md-5">
+    <div class="col-md-9">
       <form #f="ngForm">
-        <p>Please insert username and password to Login or Sign Up</p>
-        <div class="form-group">
-          <input class="form-control" type="text" id="user" name="username" placeholder="Username" ngModel>
-        </div>
-        <div class="form-group">
-          <input class="form-control" type="password" id="pass" name="password" placeholder="Password" ngModel>
-        </div>
-        <!-- "(click)"" è un tipo di binding unidirezionale (dal template al ts): quando l'utente clicca
-        sul bottone viene eseguito il metodo login(f) del ts. f non è altro che la form con tutti i valori
-      inseriti (verranno poi spacchettati dal ts) -->
-        <button type="submit" (click)="login(f)">Login</button>
-        <button type="submit">Sign Up</button>
-      </form>
+        <div class="login-wrap">
+          <div class="login-html">
+            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+            <div class="login-form">
+              <div class="sign-in-htm">
+                <div class="group">
+                  <label for="user" class="label">Username</label>
+                  <input id="user" type="text" class="input" name="username" placeholder="Username" ngModel>
+                </div>
+                <div class="group">
+                  <label for="pass" class="label">Password</label>
+                  <input id="pass" type="password" class="input" name="password" placeholder="Password" ngModel>
+                </div>
+                <div class="group">
+                  <input id="check" type="checkbox" class="check" checked>
+                  <label for="check"><span class="icon"></span> Keep me Signed in</label>
+                </div>
+                <div class="group">
+                  <input type="submit" (click)="login(f)" class="button" value="Sign In">
+                </div>
+                <div class="social">
+                  <a class="fa fa-twitter" id="twitter" title="" target="_blank" href="https://twitter.com/"></a>
+                  <a class="fa fa-facebook" title="" target="_blank" href="https://www.facebook.com"></a>
+                  <a class="fa fa-linkedin" title="" target="_blank" href="https://www.linkedin.com"></a>
+                  <a class="fa fa-instagram" title="" target="_blank" href="https://www.instagram.com"></a>
+                </div>
+                <div class="hr"></div>
+                <div class="foot-lnk">
+                  <a href="#forgot">Forgot Password?</a>
+                </div>
+              </div>
+              
+              <div class="sign-up-htm">
+                <div class="group">
+                  <label for="user" class="label">Username</label>
+                  <input id="user" type="text" class="input">
+                </div>
+                <div class="group">
+                  <label for="pass" class="label">Password</label>
+                  <input id="pass" type="password" class="input" data-type="password">
+                </div>
+                <div class="group">
+                  <label for="pass" class="label">Repeat Password</label>
+                  <input id="pass" type="password" class="input" data-type="password">
+                </div>
+                <div class="group">
+                  <label for="pass" class="label">Email Address</label>
+                  <input id="pass" type="text" class="input">
+                </div>
+                <div class="group">
+                  <input type="submit" class="button" value="Sign Up">
+                </div>
+                <div class="hr"></div>
+                <div class="foot-lnk">
+                  <label for="tab-1">Already Member?</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+            
+        
+        
+            
+            
+    
+            <div class="social">
+              <a class="fa fa-twitter" id="twitter" title="" target="_blank" href="https://twitter.com/"></a>
+              <a class="fa fa-facebook" title="" target="_blank" href="https://www.facebook.com"></a>
+              <a class="fa fa-linkedin" title="" target="_blank" href="https://www.linkedin.com"></a>
+              <a class="fa fa-instagram" title="" target="_blank" href="https://www.instagram.com"></a>
+            </div>
+           
+           
+           <!-- <div class="cerchio">
+               <div class="ddd">
+              <button type="submit" (click)="login(f)"  class="cerchio-control" id="logon">Login</button>
+              <button type="submit"  id="reg">Register</button>
+            </div>          
+            </div>   -->
+          </form>
     </div>
   </div>
-</div>
+
